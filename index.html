@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SiloBridge &mdash; Revenue Integrity Infrastructure</title>
 <meta name="description" content="SiloBridge detects contradictions between what your CRM reports and what your business is actually experiencing before they become forecast failures." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2338BDF8'/%3E%3Ctext x='32' y='42' font-family='IBM Plex Mono, monospace' font-size='24' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -18,9 +19,9 @@
   --err:#B03030;--elt:#FCF0F0;
   --wrn:#9A5418;--wlt:#FDF2E6;
   --ok:#186E48;--olt:#E8F7EF;
-  --fn:'Fraunces',Georgia,serif;
-  --fb:'DM Sans',system-ui,sans-serif;
-  --fm:'DM Mono',monospace
+  --fn:'IBM Plex Sans',system-ui,sans-serif;
+  --fb:'IBM Plex Sans',system-ui,sans-serif;
+  --fm:'IBM Plex Mono',monospace
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.7;overflow-x:hidden}
@@ -38,8 +39,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:7.5rem 2.5rem 4rem;max-width:1200px;margin:0 auto}
 .eyebrow{font-family:var(--fm);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:1.5rem;display:flex;align-items:center;gap:.7rem}
 .eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--copper)}
-h1{font-family:var(--fn);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:1.5rem;letter-spacing:-.01em}
-h1 em{font-style:italic;color:var(--copper)}
+h1{font-family:var(--fn);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:1.5rem;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--copper)}
 .h-sub{font-size:1rem;color:var(--ink2);font-weight:300;line-height:1.8;max-width:480px;margin-bottom:2.5rem}
 .h-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:2.75rem}
 .btn-p{font-family:var(--fm);font-size:.76rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);background:var(--ink);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:background .15s}
@@ -48,7 +49,7 @@ h1 em{font-style:italic;color:var(--copper)}
 .btn-s:hover{color:var(--copper);border-color:var(--copper)}
 .h-stats{display:flex;gap:2rem;padding-top:2rem;border-top:1px solid var(--bdr);flex-wrap:wrap}
 .stat{display:flex;flex-direction:column;gap:.2rem}
-.sv{font-family:var(--fn);font-size:1.75rem;font-weight:400;color:var(--ink)}
+.sv{font-family:var(--fn);font-size:1.75rem;font-weight:700;color:var(--ink)}
 .sl{font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
 
 /* DETECTION CARDS */
@@ -63,7 +64,7 @@ h1 em{font-style:italic;color:var(--copper)}
 .tag.h{background:var(--wlt);color:var(--wrn)}
 .tag.s{background:var(--olt);color:var(--ok)}
 .dc-conf{font-family:var(--fm);font-size:.7rem;color:var(--ink3)}
-.dc-title{font-family:var(--fn);font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:.35rem}
+.dc-title{font-family:var(--fn);font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.35rem}
 .dc-meta{font-size:.8rem;color:var(--ink2);font-weight:300}
 .dc-ev{margin-top:.85rem;padding:.7rem .85rem;background:var(--bg2);border-left:2px solid var(--bdr2)}
 .dc-ev p{font-family:var(--fm);font-size:.7rem;color:var(--ink2);line-height:1.55}
@@ -79,7 +80,7 @@ h1 em{font-style:italic;color:var(--copper)}
 .sec-inner{max-width:1200px;margin:0 auto}
 .sec-ey{font-family:var(--fm);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem}
 .sec-ey::before{content:'';width:18px;height:1px;background:var(--copper);display:inline-block}
-.sec-t{font-family:var(--fn);font-size:clamp(1.65rem,3vw,2.5rem);font-weight:400;color:var(--ink);line-height:1.18;margin-bottom:.85rem;max-width:580px}
+.sec-t{font-family:var(--fn);font-size:clamp(1.65rem,3vw,2.5rem);font-weight:700;color:var(--ink);line-height:1.18;margin-bottom:.85rem;max-width:580px;letter-spacing:-.01em}
 .sec-sub{font-size:.92rem;color:var(--ink2);font-weight:300;line-height:1.8;max-width:520px;margin-bottom:3rem}
 hr.div{border:none;border-top:1px solid var(--bdr)}
 
@@ -90,12 +91,12 @@ hr.div{border:none;border-top:1px solid var(--bdr)}
 .cc.ph::before{background:var(--err)}
 .cc.eg::before{background:var(--wrn)}
 .cc.ev::before{background:var(--ok)}
-.cn{font-family:var(--fn);font-size:2.8rem;font-weight:300;font-style:italic;color:var(--bdr2);line-height:1;margin-bottom:1.25rem}
+.cn{font-family:var(--fn);font-size:2.8rem;font-weight:700;font-style:normal;color:var(--bdr2);line-height:1;margin-bottom:1.25rem}
 .ctag{font-family:var(--fm);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.26rem .65rem;margin-bottom:.85rem;display:inline-block;font-weight:500}
 .cc.ph .ctag{background:var(--elt);color:var(--err)}
 .cc.eg .ctag{background:var(--wlt);color:var(--wrn)}
 .cc.ev .ctag{background:var(--olt);color:var(--ok)}
-.cc h3{font-family:var(--fn);font-size:1.18rem;font-weight:400;color:var(--ink);margin-bottom:.65rem;line-height:1.3}
+.cc h3{font-family:var(--fn);font-size:1.18rem;font-weight:600;color:var(--ink);margin-bottom:.65rem;line-height:1.3}
 .cc p{font-size:.85rem;color:var(--ink2);font-weight:300;line-height:1.75;margin-bottom:1.25rem}
 .csig{background:var(--bg2);padding:.8rem .95rem;border-left:2px solid var(--bdr2);margin-bottom:1.1rem}
 .csig p{font-family:var(--fm);font-size:.68rem;color:var(--ink3);line-height:1.55}
@@ -113,7 +114,7 @@ hr.div{border:none;border-top:1px solid var(--bdr)}
 /* STEPS */
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--bdr);border:1px solid var(--bdr);margin-bottom:3rem}
 .step{background:white;padding:2.25rem 1.75rem}
-.sn{font-family:var(--fn);font-size:2.2rem;font-weight:300;font-style:italic;color:var(--bdr);line-height:1;margin-bottom:1.5rem}
+.sn{font-family:var(--fn);font-size:2.2rem;font-weight:700;font-style:normal;color:var(--bdr);line-height:1;margin-bottom:1.5rem}
 .step h4{font-size:.92rem;font-weight:500;color:var(--ink);margin-bottom:.55rem;line-height:1.4}
 .step p{font-size:.84rem;color:var(--ink2);font-weight:300;line-height:1.75}
 .sd{margin-top:1.1rem;padding:.75rem .9rem;background:var(--bg2);border:1px solid var(--bdr)}
@@ -123,7 +124,7 @@ hr.div{border:none;border-top:1px solid var(--bdr)}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
 .dlv{background:white;border:1px solid var(--bdr);padding:1.85rem}
 .di{font-family:var(--fm);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);background:var(--clt);padding:.28rem .65rem;display:inline-block;margin-bottom:1.1rem}
-.dlv h4{font-family:var(--fn);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:.55rem}
+.dlv h4{font-family:var(--fn);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.55rem}
 .dlv p{font-size:.84rem;color:var(--ink2);font-weight:300;line-height:1.75}
 .dlv ul{list-style:none;margin-top:.9rem}
 .dlv ul li{font-family:var(--fm);font-size:.72rem;color:var(--ink2);padding:.38rem 0;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:.55rem}
@@ -134,7 +135,7 @@ hr.div{border:none;border-top:1px solid var(--bdr)}
 .audit{background:var(--ink);padding:5rem 4rem;text-align:center}
 .audit .sec-ey{color:var(--copper);justify-content:center}
 .audit .sec-ey::before{background:var(--copper)}
-.ap{font-family:var(--fn);font-size:clamp(3.5rem,7vw,6rem);font-weight:300;font-style:italic;color:white;line-height:1;margin:1.1rem 0 .4rem}
+.ap{font-family:var(--fn);font-size:clamp(3.5rem,7vw,6rem);font-weight:700;font-style:normal;color:white;line-height:1;margin:1.1rem 0 .4rem;letter-spacing:-.02em}
 .at{font-family:var(--fm);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:1.75rem}
 .ad{font-size:.92rem;color:rgba(255,255,255,.55);font-weight:300;max-width:450px;margin:0 auto 2.5rem;line-height:1.8}
 .adets{display:flex;justify-content:center;gap:3rem;margin-bottom:3rem;flex-wrap:wrap}
@@ -220,7 +221,7 @@ h1{animation:fu .5s .08s ease both}
         <span class="tag c">Phantom Commit</span>
         <span class="dc-conf">91% confidence</span>
       </div>
-      <p class="dc-title">Accenture &mdash; Enterprise License</p>
+      <p class="dc-title">Veridian Systems &mdash; Enterprise License</p>
       <p class="dc-meta">Stage: Commit &nbsp;&middot;&nbsp; Probability: 87% &nbsp;&middot;&nbsp; $280,000</p>
       <div class="dc-ev">
         <p><span>CRM owner:</span> Updated deal to Commit on Jun 01. Expected close Jun 30.</p>
@@ -430,6 +431,7 @@ h1{animation:fu .5s .08s ease both}
     <div class="adi"><span class="adv">No changes</span><span class="adk">To your systems</span></div>
     <div class="adi"><span class="adv">2 slots</span><span class="adk">Available now</span></div>
   </div>
+  <p class="at" style="margin-bottom:2.5rem">First 2 design partners: $25,000/year &mdash; founding rate</p>
   <a href="mailto:debiprasad@silobridge.app?subject=Revenue Integrity Audit Request" class="btn-l">Request Audit &rarr;</a>
 </div>
 
